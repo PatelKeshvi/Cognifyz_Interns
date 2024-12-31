@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="gallery.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <title>Image Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+            color: white;
+            background: #114357;
+            background: -webkit-linear-gradient(to right, #F29492, #114357);
+            background: linear-gradient(to right, #F29492, #114357);
+        }
+
+        header {
+            margin-bottom: 20px;
+        }
+
+        nav {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            padding: 10px 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0px;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #114357;
+            font-weight: bold;
+            padding: 10px 50px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #F29492;
+            color: white;
+        }
+
+        h1 {
+            margin: 30px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(7, 241, 167, 0.5);
+        }
+
+        .gallery {
+            margin: 10px;
+            display: list-item;
+            justify-content: center;
+            gap: 15px;
+            padding: 40px;
+        }
+
+        .thumbnail {
+            width: 120px;
+            height: auto;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .thumbnail:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .lightbox:target {
+            display: flex;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 30px;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .close:hover {
+            color: #ff4081;
+        }
+
+        .slideshow-container {
+            position: relative;
+            max-width: 600px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .mySlides {
+            display: none;
+            animation: fade 1.5s infinite;
+        }
+
+        @keyframes fade {
+            0% {
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            25% {
+                opacity: 1;
+            }
+
+            35% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .mySlides:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .mySlides:nth-child(2) {
+            animation-delay: 3s;
+        }
+
+        .mySlides:nth-child(3) {
+            animation-delay: 6s;
+        }
+
+        .mySlides:nth-child(4) {
+            animation-delay: 9s;
+        }
+
+        .mySlides img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="image_gallery.html">Gallery</a></li>
+                <li><a href="image_slideshow.html">Slideshow</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Image Gallery</h1>
+    <div class="gallery">
+        <a href="#img1"><img src="https://cdn.pixabay.com/photo/2024/12/20/02/50/new-year-9279071_960_720.jpg"
+                alt="Image 1" class="thumbnail"></a>
+        <a href="#img2"><img src="https://cdn.pixabay.com/photo/2024/12/21/07/54/christmas-9281509_1280.jpg"
+                alt="Image 2" class="thumbnail"></a>
+        <a href="#img3"><img src="https://cdn.pixabay.com/photo/2024/01/14/21/44/snowman-8508881_960_720.jpg"
+                alt="Image 3" class="thumbnail"></a>
+        <a href="#img4"><img src="https://cdn.pixabay.com/photo/2022/12/11/19/47/christmas-7649624_960_720.jpg"
+                alt="Image 4" class="thumbnail"></a>
+        <a href="#img5"><img src="https://cdn.pixabay.com/photo/2022/11/29/11/14/elf-7624306_960_720.jpg" alt="Image 5"
+                class="thumbnail"></a>
+        <a href="#img6"><img src="https://cdn.pixabay.com/photo/2022/12/02/03/03/santa-claus-7630153_1280.jpg"
+                alt="Image 6" class="thumbnail"></a>
+        <a href="#img7"><img src="https://cdn.pixabay.com/photo/2022/11/27/13/18/baby-7619788_1280.jpg" alt="Image 7"
+                class="thumbnail"></a>
+        <a href="#img8"><img src="https://cdn.pixabay.com/photo/2023/12/04/19/19/santa-claus-8430184_1280.jpg"
+                alt="Image 8" class="thumbnail"></a>
+        <a href="#img9"><img src="https://cdn.pixabay.com/photo/2023/11/25/13/24/girl-8411745_1280.jpg" alt="Image 9"
+                class="thumbnail"></a>
+        <a href="#img10"><img src="https://cdn.pixabay.com/photo/2023/11/25/13/24/girls-8411741_1280.jpg" alt="Image 10"
+                class="thumbnail"></a>
+        <a href="#img11"><img src="https://cdn.pixabay.com/photo/2023/11/26/16/58/christmas-wallpaper-8413947_1280.jpg"
+                alt="Image 11" class="thumbnail"></a>
+        <a href="#img12"><img src="https://cdn.pixabay.com/photo/2022/11/13/21/02/nicholas-7590176_1280.jpg"
+                alt="Image 12" class="thumbnail"></a>
+        <a href="#img13"><img src="https://cdn.pixabay.com/photo/2022/10/21/14/08/santa-claus-7537148_960_720.jpg"
+                alt="Image 13" class="thumbnail"></a>
+        <a href="#img14"><img src="https://cdn.pixabay.com/photo/2023/01/06/15/16/christmas-7701479_960_720.jpg"
+                alt="Image 14" class="thumbnail"></a>
+        <a href="#img15"><img src="https://cdn.pixabay.com/photo/2023/01/01/10/08/santa-claus-7689872_960_720.jpg"
+                alt="Image 15" class="thumbnail"></a>
+        <a href="#img16"><img src="https://cdn.pixabay.com/photo/2022/12/15/14/41/santa-claus-7657878_960_720.jpg"
+                alt="Image 16" class="thumbnail"></a>
+        <a href="#img17"><img src="https://cdn.pixabay.com/photo/2022/12/13/14/42/christmas-7653539_1280.jpg"
+                alt="Image 17" class="thumbnail"></a>
+        <a href="#img18"><img src="https://cdn.pixabay.com/photo/2022/12/13/02/11/santa-claus-7652277_1280.jpg"
+                alt="Image 18" class="thumbnail"></a>
+    </div>
+
+    <div class="lightbox" id="img1">
+        <a href="#!" class="close">&times;</a>
+        <img src="https://cdn.pixabay.com/photo/2024/12/20/02/50/new-year-9279071_960_720.jpg" alt="Image 1">
+    </div>
+    <div class="lightbox" id="img2">
+        <a href="#!" class="close">&times;</a>
+        <img src="https://cdn.pixabay.com/photo/2024/12/21/07/54/christmas-9281509_1280.jpg" alt="Image 2">
+    </div>
+    <div class="lightbox" id="img3">
+        <a href="#!" class="close">&times;</a>  
+        <img src="https://cdn.pixabay.com/photo/2024/01/14/21/44/snowman-8508881_960_720.jpg" alt="Image 3">
+    </div>
+    <div class="lightbox" id="img4">
+        <a href="#!" class="close">&times;</a>
+        <img src="https://cdn.pixabay.com/photo/2022/12/11/19/47/christmas-7649624_960_720.jpg" alt="Image 4">
+    </div>
+    <div class="lightbox" id="img5">
+        <a href="#!" class="close">&times;</a>
+        <img src="https://cdn.pixabay.com/photo/2022/11/29/11/14/elf-7624306_960_720.jpg" alt="Image 5">
+    </div>
+    <div class="lightbox" id="img6">
+        <a href="#!" class="close">&times;</a>
+        <img src="https://cdn.pixabay.com/photo/2022/12/02/03/03/santa-claus-7630153_1280.jpg" alt="Image 6">
+    </div>
+    <div class="lightbox" id="img7">
+        <a href="#!" class="close">&times;</a>
+        <img src="https://cdn.pixabay.com/photo/2022/11/27/13/18/baby-7619788_1280.jpg" alt="Image 7">
+    </div>
+    <div class="lightbox" id="img8">
+        <a href="#!" class="close">&times;</a>
+        <img src="https://cdn.pixabay.com/photo/2023/12/04/19/19/santa-claus-8430184_1280.jpg" alt="Image 8">
+    </div>
+    <div class="lightbox" id="img9">
+        <a href="#!" class="close">&times;</a>
+        <img src="https://cdn.pixabay.com/photo/2023/11/25/13/24/girl-8411745_1280.jpg" alt="Image 9">
+    </div>
+    <div class="lightbox" id="img10">
+        <a href="#!" class="close">&times;</a>
+        <img src="https://cdn.pixabay.com/photo/2023/11/25/13/24/girls-8411741_1280.jpg" alt="Image 10">
+    </div>
+    <div class="lightbox" id="img11">
+        <a href="#!" class="close">&times;</a>
+        <img src="https://cdn.pixabay.com/photo/2023/11/26/16/58/christmas-wallpaper-8413947_1280.jpg" alt="Image 11">
+    </div>
+    <div class="lightbox" id="img12">
+        <a href="#!" class="close">&times;</a>
+        <img src="https://cdn.pixabay.com/photo/2022/11/13/21/02/nicholas-7590176_1280.jpg" alt="Image 12">
+    </div>
+    <div class="lightbox" id="img13">
+        <a href="#!" class="close">&times;</a>
+        <img src="https://cdn.pixabay.com/photo/2022/10/21/14/08/santa-claus-7537148_960_720.jpg" alt="Image 13">
+    </div>
+    <div class="lightbox" id="img14">
+        <a href="#!" class="close">&times;</a>
+        <img src="https://cdn.pixabay.com/photo/2023/01/06/15/16/christmas-7701479_960_720.jpg" alt="Image 14">
+    </div>
+    <div class="lightbox" id="img15">
+        <a href="#!" class="close">&times;</a>
+        <img src="https://cdn.pixabay.com/photo/2023/01/01/10/08/santa-claus-7689872_960_720.jpg" alt="Image 15">
+    </div>
+    <div class="lightbox" id="img16">
+        <a href="#!" class="close">&times;</a>
+        <img src="https://cdn.pixabay.com/photo/2022/12/15/14/41/santa-claus-7657878_960_720.jpg" alt="Image 16">
+    </div>
+    <div class="lightbox" id="img17">
+        <a href="#!" class="close">&times;</a>
+        <img src="https://cdn.pixabay.com/photo/2022/12/13/14/42/christmas-7653539_1280.jpg" alt="Image 17">
+    </div>
+    <div class="lightbox" id="img18">
+        <a href="#!" class="close">&times;</a>
+        <img src="https://cdn.pixabay.com/photo/2022/12/13/02/11/santa-claus-7652277_1280.jpg" alt="Image 18">
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <link rel="shortcut icon" href="gallery.png" type="image/x-icon">
+    <style>
+        body {
+            box-sizing: border-box;
+            margin: 20px;
+            font-family: Arial, sans-serif;
+            background: #114357;
+            background: -webkit-linear-gradient(to right, #F29492, #114357);
+            background: linear-gradient(to right, #F29492, #114357);
+        }
+
+        header {
+            margin-bottom: 20px;
+        }
+
+        nav {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            padding: 10px 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0px;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #114357;
+            font-weight: bold;
+            padding: 10px 50px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #F29492;
+            color: white;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 30px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(7, 241, 167, 0.5);
+        }
+
+        .slider {
+            position: relative;
+            max-width: 500px;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .slides {
+            display: flex;
+            animation: slide 12s infinite;
+        }
+
+        .slide {
+            min-width: 100%;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .slide img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+
+            20% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-100%);
+            }
+
+            45% {
+                transform: translateX(-100%);
+            }
+
+            50% {
+                transform: translateX(-200%);
+            }
+
+            70% {
+                transform: translateX(-200%);
+            }
+
+            75% {
+                transform: translateX(-300%);
+            }
+
+            95% {
+                transform: translateX(-300%);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="image_gallery.html">Gallery</a></li>
+                <li><a href="image_slideshow.html">Slideshow</a></li>
+            </ul>
+        </nav>
+        <h1>Image Gallery</h1>
+    </header>
+    <div class="slider">
+        <div class="slides">
+            <div class="slide slide1">
+                <img src="https://cdn.pixabay.com/photo/2024/12/20/02/50/new-year-9279071_960_720.jpg" alt="Slide 1">
+            </div>
+            <div class="slide slide2">
+                <img src="https://cdn.pixabay.com/photo/2024/12/21/07/54/christmas-9281509_1280.jpg" alt="Slide 2">
+            </div>
+            <div class="slide slide3">
+                <img src="https://cdn.pixabay.com/photo/2024/01/14/21/44/snowman-8508881_960_720.jpg" alt="Slide 3">
+            </div>
+            <div class="slide slide4">
+                <img src="https://cdn.pixabay.com/photo/2022/12/11/19/47/christmas-7649624_960_720.jpg" alt="Slide 4">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

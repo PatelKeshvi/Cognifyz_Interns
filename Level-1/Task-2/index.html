@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Website </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="business.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="calculator-section">
+        <h2>Calculator 🧮</h2>
+        <hr> <br>
+        <label for="num1">Enter The First Number</label>
+        <input type="number" id="num1" placeholder="First Number"> <br><br>
+        <label for="num2">Enter The Second Number</label>
+        <input type="number" id="num2" placeholder="Second Number">
+        <div class="button-group">
+            <button id="addButton"><i class="fa-solid fa-plus"></i></button>
+            <button id="subtractButton"><i class="fa-solid fa-minus"></i></button>
+            <button id="multiplyButton"><i class="fa-solid fa-xmark"></i></button>
+            <button id="divideButton"><i class="fa-solid fa-divide"></i></button>
+        </div>
+        <p id="result"></p>
+    </div>
+
+    <div class="button-section">
+        <h2>Magic Button! ✨</h2>
+        <hr>
+        <button id="greetButton">Greet me 🙏🏻</button>
+        <button id="colorButton">Click me 🖊️</button>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

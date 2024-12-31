@@ -1,0 +1,111 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #649173;
+    background: -webkit-linear-gradient(to right, #DBD5A4, #649173);
+    background: linear-gradient(to right, #DBD5A4, #649173);
+}
+
+h2 {
+    color: #3bd190;
+}
+
+label{
+    color: #6aad90;
+}
+
+.button-section,
+.greeting-section,
+.calculator-section {
+    background: rgba(236, 246, 243, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(219, 124, 233, 0.3);
+    margin: 10px;
+    width: 550px;
+    transition: box-shadow 0.3s;
+}
+
+.button-section:hover,
+.greeting-section:hover,
+.calculator-section:hover {
+    box-shadow: 0 12px 40px rgba(170, 230, 213, 0.4);
+}
+
+@keyframes shake {
+    0% { transform: translate(0); }
+    25% { transform: translate(-5px, 0); }
+    50% { transform: translate(5px, 0); }
+    75% { transform: translate(-5px, 0); }
+    100% { transform: translate(0); }
+}
+
+.button-section button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #333;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    margin: 10px 0; 
+}
+
+.button-section button:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); 
+}
+
+.button-section button:active {
+    animation: shake 0.5s; 
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #333;
+    box-shadow: 0 4px 15px rgba(59, 61, 26, 0.2);
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    margin: 10px 0;
+}
+
+button:hover {
+    background-color: #d5ece2;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(63, 63, 188, 0.3);
+}
+
+input {
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: calc(100% - 22px);
+    box-shadow: 0 0 8px rgba(39, 36, 34, 0.5);
+    transition: box-shadow 0.3s;
+}
+
+input:focus {
+    border-color: #d3def1;
+    outline: none;
+    box-shadow: 0 0 5px rgba(69, 109, 177, 0.5);
+}
+
+#result {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #333;
+}
