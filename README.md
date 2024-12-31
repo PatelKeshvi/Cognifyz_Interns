@@ -9,7 +9,7 @@
  and CSS.
  Design and code a simple navigation
  menu with three links using HTML and
- CSS.</p> <br>
+ CSS.</p> 
  <h3>Task 2</h3>
 <p> JavaScript:
  Develop a basic button that changes
@@ -20,7 +20,7 @@
  time using JavaScript.
  Build a basic calculator that adds two
  numbers together and displays the
- result using JavaScript.</p> <br><br>
+ result using JavaScript.</p> <br>
 
  <h1><b>Level 3</b></h1>
 <h3>Task 1</h3>
@@ -39,7 +39,7 @@
  when clicked.
  Implement a simple image slideshow
  that automatically transitions between
- images using HTML and CSS.</p> <br>
+ images using HTML and CSS.</p> 
  <h3>Task 2</h3>
 <p> Create a landing page for a web developer internship
  with the following key elements:
